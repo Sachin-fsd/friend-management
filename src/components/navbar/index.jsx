@@ -15,6 +15,7 @@ const navigation = [
   { name: 'Requests', to: '/requests' },
   { name: 'Friends', to: '/friends' },
   { name: 'Suggestions', to: '/suggestions' },
+  { name: 'Search', to: '/search' },
 ];
 
 function classNames(...classes) {

@@ -45,6 +45,7 @@ const Suggestions = () => {
                 }
 
                 const data = await response.json();
+                console.log(data)
                 setUsers(data.suggestions || []);
             } catch (err) {
                 setError(err.message);
@@ -80,7 +81,7 @@ const Suggestions = () => {
                             >
                                 <img
                                     src={user.friendDetails.dp || 'https://via.placeholder.com/150'}
-                                    alt={`${user.name}'s profile`}
+                                    alt={`${user.friendDetails.name}'s profile`}
                                     className="w-24 h-24 mx-auto rounded-full mb-4"
                                 />
                                 <div className="text-center">

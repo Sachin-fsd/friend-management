@@ -13,7 +13,7 @@ const Home = () => {
       try {
         setLoading(true);
 
-        const response = await fetch(`http://localhost:8080/`, {
+        const response = await fetch(`https://friendz-backend.vercel.app/`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

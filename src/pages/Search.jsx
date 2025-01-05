@@ -17,7 +17,7 @@ const Search = () => {
 
     console.log('Search started...', query);
 
-    fetch(`http://localhost:8080/search?query=${query}`, {
+    fetch(`https://friendz-backend.vercel.app/search?query=${query}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
       },
@@ -42,7 +42,7 @@ const Search = () => {
   const handleFriendToggle = async (id, friendStatus) => {
     try {
       setDisableButton(true)
-      const response = await fetch(`http://localhost:8080/${id}`, {
+      const response = await fetch(`https://friendz-backend.vercel.app/${id}`, {
         method: friendStatus == "accepted" ? 'DELETE' : friendStatus == "pending" ? 'DELETE' : "POST", // DELETE to unfriend, POST to add friend
         headers: {
           "Authorization": `Bearer ${localStorage.getItem("token")}` || "",

@@ -23,7 +23,7 @@ const Signup = () => {
 
     try {
       // Example of sending signup data to backend
-      const response = await fetch("http://localhost:8080/register", {
+      const response = await fetch("https://friendz-backend.vercel.app/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

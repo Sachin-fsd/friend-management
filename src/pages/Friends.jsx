@@ -8,7 +8,7 @@ const FriendsComponent = () => {
     useEffect(() => {
         const fetchSuggestions = async () => {
             try {
-                const response = await fetch('http://localhost:8080/friends', {
+                const response = await fetch('https://friendz-backend.vercel.app/friends', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },

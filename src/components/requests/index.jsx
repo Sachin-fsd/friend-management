@@ -10,7 +10,7 @@ const RequestsComponent = () => {
   useEffect(() => {
     const fetchPendingRequests = async () => {
       try {
-        const response = await fetch('http://localhost:8080/requests', {
+        const response = await fetch('https://friendz-backend.vercel.app/requests', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const RequestsComponent = () => {
 
   const handleAccept = async (requestId) => {
     try {
-      const response = await fetch(`http://localhost:8080/request/accept/${requestId}`, {
+      const response = await fetch(`https://friendz-backend.vercel.app/request/accept/${requestId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const RequestsComponent = () => {
 
   const handleReject = async (requestId) => {
     try {
-      const response = await fetch(`http://localhost:8080/request/reject/${requestId}`, {
+      const response = await fetch(`https://friendz-backend.vercel.app/request/reject/${requestId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

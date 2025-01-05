@@ -12,7 +12,7 @@ const Suggestions = () => {
         try {
             setDisableAddFriend(true);
             toast("sending request...")
-            fetch(`http://localhost:8080/${id}`, {
+            fetch(`https://friendz-backend.vercel.app/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
                 },
@@ -33,7 +33,7 @@ const Suggestions = () => {
     useEffect(() => {
         const fetchSuggestions = async () => {
             try {
-                const response = await fetch('http://localhost:8080/suggestions', {
+                const response = await fetch('https://friendz-backend.vercel.app/suggestions', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },

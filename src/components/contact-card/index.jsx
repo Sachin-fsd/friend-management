@@ -21,7 +21,7 @@ const ContactCard = ({
     // Function to toggle friend status
     const handleFriendToggle = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/${id}`, {
+            const response = await fetch(`https://friendz-backend.vercel.app/${id}`, {
                 method: friendStatus == "accepted" ? 'DELETE' : friendStatus == "pending" ? 'DELETE' : "POST", // DELETE to unfriend, POST to add friend
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}` || "",
